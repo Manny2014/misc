@@ -1,0 +1,36 @@
+<div class="container">
+ <table>
+  <tr ng-repeat="x in tacotypes">
+    <td>{{x.type + ": " + x.des}}</td>
+  </tr>
+</table>
+
+</div>
+
+<div class="container">
+    <input type="button" value="click me" ng-click="alertCLick()" />
+</div>
+
+ <table ng-cloak>
+  <tr ng-repeat="x in somearray">
+    <td>{{x}}</td>
+  </tr>
+</table>
+
+<div  ng-init="quantity=1;price=5">
+
+Quantity: <input type="number" ng-model="quantity">
+Costs:    <input type="number" ng-model="price">
+
+Total in dollar: {{ quantity * price }}
+
+</div>
+
+<div w3-test-directive></div>
+
+<input type="text" ng-model="userId">
+
+
+<div class="container">
+    {{githubdata}}
+</div>
