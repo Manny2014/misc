@@ -4,7 +4,7 @@ app.controller("mainController",['$scope','$log', '$filter', '$resource',functio
 
 
 app.controller("consulController",['$scope','$log', '$filter', '$resource', '$auth','$http','consulsrv',function($scope, $log, $filter, $resource, $auth,$http, consulsrv){
-    $scope.description = "Consul Test"
+
     $scope.consulGetNodes = function(){
       consulsrv.getNodes().then(function(data){
         $scope.consulNodes =  data;
@@ -12,9 +12,16 @@ app.controller("consulController",['$scope','$log', '$filter', '$resource', '$au
         $scope.consulNodes = data.state;
       }); 
    };
+  
+    $scope.consulGetServices = function(){
+      consulsrv.getServices().then(function(data){
+        $scope.consulServices =  data;
+      },function(response) {
+        $scope.consulServices = data.state;
+      }); 
+    };
     
   $scope.consulGetNodes()
-    $log.info("LOADED");
-    $scope.test = "TESST"
+  $scope.consulGetServices()
     
 }]);
