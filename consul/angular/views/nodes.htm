@@ -21,12 +21,14 @@
    <div class="table-responsive">
         <table class="table">
           <tr ng-repeat="service in consulServices">
-            <td>{{service.ServiceID}}</td>
             <td>{{service.Node}}</td>
-            <td>{{service.Address}}</td>
-            <td>{{service.ServiceName}}</td>
-            <td>{{service.ServiceAddress}}</td>
-            <td>{{service.ServicePort}}</td>
+            <td>{{service.Name}}</td>
+            <td>{{service.ServiceID}}</td>
+            <td><span ng-if="service.Status == 'passing'" ng-style="{color: 'green'}" >{{service.Status}}</span>
+            <span ng-if="service.Status == 'failing'" ng-style="{color: 'red'}" >{{service.Status}}</span>
+            </td>
+            <td>{{service.CheckID}}</td>
+            <td>{{service.Notes}}</td>
           </tr>
        </table>
     </div>    

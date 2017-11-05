@@ -16,7 +16,7 @@ app.factory('consulsrv',['$http','$log','$q', function($http,$log,$q) {
     // Get single service with details
     consulsrv.getService = function(serviceName){
         $log.info("Executing getService");
-        getUrl = baseurl + "/catalog/service/" + serviceName;
+        getUrl = baseurl + "/health/checks/" + serviceName;
         var data = {}
         return $http.get(getUrl)
             .then(function(response) {
