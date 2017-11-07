@@ -3,7 +3,7 @@
 var app = angular.module("myApp", ["ngRoute", "ngMessages", "ngResource","satellizer"]);
 
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider,$locationProvider) {
     $routeProvider.
     when('/', {
       templateUrl: 'views/main.htm', controller: 'mainController'
@@ -15,4 +15,5 @@ app.config(function($routeProvider) {
       redirectTo: '/'
    });
    
+    $locationProvider.html5Mode(true);
 });
