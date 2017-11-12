@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+
+import sys, json, requests, os
+import subprocess
+import shlex
+
+def main():
+    basae_url = "http://localhost:8500/v1/"
+    for line in sys.stdin:
+        payload = json.loads(line)
+        print("RAW: \n" + str(payload))
+        for item in payload:
+            node_health_url = basae_url + "health/node/" + item['Node']['Node']
+            print("NODE URL " + node_health_url)
+            for chk in item['Checks']:
+                srv_health_url = basae_url + "/health/service/" + chk['ServiceName']
+                if chk['Status'] == 'critical':
+                    if 'Maintenance Mode' in chk['Name']:
+                        print("SERVICE NAME: " + chk['ServiceName'] + " STATUS: " +chk['Status'] + " In Maintnence Mode: YES")
+                        remidiate(srv_health_url)
+                    else:
+                        print("SERVICE NAME: " + chk['ServiceName'] + " STATUS: " +chk['Status'] + " In Maintnence Mode: NO")
+                        remidiate(srv_health_url)
+                elif chk['Status'] == 'passing':
+                    print("SERVICE NAME: " + chk['ServiceName'] + " STATUS: " +chk['Status'])
+                elif chk['Status'] == "warning":
+                    print("SERVICE NAME: " + chk['ServiceName'] + " STATUS: " +chk['Status'])
+
+def remidiate(url):
+    print("FIXING")
+    r = requests.get(url)
+    content = json.loads(r.content)
+    bad_node = content
+    print("Bad " + str(bad_node))
+    os.system('sh /Users/manny/git/misc/consul/service/deregister.sh')
+    os.system('/Users/manny/git/misc/consul/service/register.sh')
+
+
+if __name__ == "__main__":
+    main()

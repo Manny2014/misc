@@ -1,0 +1,10 @@
+{
+      "ID": "jenkins1",
+      "Name": "jenkins",
+      "Tags": [
+        "jenkins",
+        "master"
+      ],
+      "EnableTagOverride": false,
+      "check": {"script": "cat test.xt", "interval": "10s"}
+}

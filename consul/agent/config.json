@@ -1,0 +1,18 @@
+{
+	"data_dir": "/data",
+	"ui_dir": "/ui",
+    "enable_script_checks": true,
+	"client_addr": "0.0.0.0",
+	"ports": {
+		"dns": 53
+	},
+	"recursor": "8.8.8.8",
+	"disable_update_check": true,
+        "watches":[
+      {
+          "type": "service",
+          "service": "jenkins1",
+          "args": ["/tmp/watch-script.sh"]
+      }
+  ]
+}
