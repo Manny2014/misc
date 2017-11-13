@@ -32,7 +32,7 @@ def remidiate(url):
     content = json.loads(r.content)
     bad_node = content
     print("Bad " + str(bad_node))
-    os.system('sh /Users/manny/git/misc/consul/service/deregister.sh')
+    #os.system('sh /Users/manny/git/misc/consul/service/deregister.sh')
     os.system('/Users/manny/git/misc/consul/service/register.sh')
 
 

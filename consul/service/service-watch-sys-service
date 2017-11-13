@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+import sys
+import time
+import sys, json, requests, os
+import subprocess
+from daemonize import Daemonize
+
+
+def main():
+    cmd = ['consul watch -type=service --service=jenkins /Users/manny/git/misc/consul/service/service-watch-script-py >> /Users/manny/git/misc/consul/service/scripts/consul-watch.log']
+    proc = subprocess.call(cmd, shell=True, preexec_fn=lambda: prctl.set_pdeathsig(signal.SIGKILL))
+    proc.wait()
+    pid, sts = os.waitpid(proc.pid, 0)
+    #os.system('consul watch -type=service --service=jenkins /Users/manny/git/misc/consul/service/service-watch-script-py >> /Users/manny/git/misc/consul/service/scripts/consul-watch.log')
+
+if __name__ == "__main__":
+    myname = "ConsulWatcher"
+    pidfile = '/tmp/%s' % myname  # any name
+    daemon = Daemonize(app=myname, pid=pidfile, action=main)
+    daemon.start()

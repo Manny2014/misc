@@ -1,0 +1,10 @@
+RAW: 
+[{u'Node': {u'Node': u'node4', u'Datacenter': u'', u'TaggedAddresses': None, u'ModifyIndex': 0, u'Meta': None, u'Address': u'172.17.0.5', u'CreateIndex': 0, u'ID': u''}, u'Checks': [{u'Node': u'node4', u'CheckID': u'service:jenkins1', u'Name': u"Service 'jenkins' check", u'ServiceName': u'jenkins', u'Notes': u'', u'Status': u'passing', u'ServiceID': u'jenkins1', u'ServiceTags': None, u'Output': u'  293 root       0:00 /bin/bash -c ps | grep jenkins\n  295 root       0:00 grep jenkins\n'}, {u'Node': u'node4', u'CheckID': u'serfHealth', u'Name': u'Serf Health Status', u'ServiceName': u'', u'Notes': u'', u'Status': u'passing', u'ServiceID': u'', u'ServiceTags': None, u'Output': u'Agent alive and reachable'}], u'Service': {u'Service': u'jenkins', u'Tags': [u'jenkins', u'master'], u'ModifyIndex': 0, u'EnableTagOverride': False, u'ID': u'jenkins1', u'Address': u'', u'CreateIndex': 0, u'Port': 0}}]
+NODE URL http://localhost:8500/v1/health/node/node4
+SERVICE NAME: jenkins STATUS: passing
+SERVICE NAME:  STATUS: passing
+RAW: 
+[{u'Node': {u'Node': u'node4', u'Datacenter': u'', u'TaggedAddresses': None, u'ModifyIndex': 0, u'Meta': None, u'Address': u'172.17.0.5', u'CreateIndex': 0, u'ID': u''}, u'Checks': [{u'Node': u'node4', u'CheckID': u'service:jenkins1', u'Name': u"Service 'jenkins' check", u'ServiceName': u'jenkins', u'Notes': u'', u'Status': u'passing', u'ServiceID': u'jenkins1', u'ServiceTags': None, u'Output': u'  293 root       0:00 /bin/bash -c ps | grep jenkins\n  295 root       0:00 grep jenkins\n'}, {u'Node': u'node4', u'CheckID': u'serfHealth', u'Name': u'Serf Health Status', u'ServiceName': u'', u'Notes': u'', u'Status': u'passing', u'ServiceID': u'', u'ServiceTags': None, u'Output': u'Agent alive and reachable'}], u'Service': {u'Service': u'jenkins', u'Tags': [u'jenkins', u'master'], u'ModifyIndex': 0, u'EnableTagOverride': False, u'ID': u'jenkins1', u'Address': u'', u'CreateIndex': 0, u'Port': 0}}]
+NODE URL http://localhost:8500/v1/health/node/node4
+SERVICE NAME: jenkins STATUS: passing
+SERVICE NAME:  STATUS: passing

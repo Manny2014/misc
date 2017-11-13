@@ -1,1 +1,0 @@
-[{"Node":"node4","CheckID":"_service_maintenance:jenkins1","Name":"Service Maintenance Mode","Status":"critical","Notes":"Maintenance mode is enabled for this service, but no reason was provided. This is a default message.","Output":"","ServiceID":"jenkins1","ServiceName":"jenkins","ServiceTags":null}]
