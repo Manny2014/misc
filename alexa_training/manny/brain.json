@@ -1,0 +1,36 @@
+{
+  "welcomeMessage": "Welcome to manny's brain, where anything is possible. Let's get it rolling",
+  "intents":{
+    "HowMuchHeLoveHer":{
+      "text":"Manny loves jime more than a fat kid loves cake.",
+      "shouldEndSession": true
+    },
+    "HowMuchHeMissHer": {
+      "text": "Manny misses Jime so much, it will be jerky jerk town for a week",
+      "shouldEndSession": true
+    },
+    "WhatDoTheyLikeTodo":{
+      "options":[
+        "{Friend} love's to eat dong's on {DayOfWeek}",
+        "On {DayOfWeek}'s, {Friend} loves to go out of he's way to down a drum of juicy semen",
+        "It is very unusual for {Friend} to miss out on some, always welcoming, ball licking on {DayOfWeek}",
+        "On {DayOfWeek}, you can find {Friend} at club, looking for the perfect man to moisterize his chest with slimy jizz."
+      ],
+      "shouldEndSession": true
+    },
+    "TellMeAStory":{
+      "options":[
+        "There's a story about {Friend} that took place in Mexico. From what I hear, he had so much fun that he came back to America with a messed up leg and was even carried to his room in a wheel chair. Classic {Friend}."
+      ],
+      "shouldEndSession": true
+    },
+    "AMAZON.StopIntent":{
+      "options":[
+        "Thank you for hangin with me today. See you on the flip side jabrony.",
+        "You are done with me??? No, I'm done with you. Goodbye!",
+        "Hasta la vista, baby."
+      ],
+      "shouldEndSession": true
+    }
+  }
+}

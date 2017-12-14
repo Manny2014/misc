@@ -1,0 +1,35 @@
+{
+  "intents": [
+    {
+      "intent": "HowMuchILoveHer"
+    },
+    {
+      "intent": "HowMuchIMissHer"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "Friend",
+          "type": "LIST_OF_FRIENDS"
+        }
+      ],
+      "intent": "TellMeAStory"
+    },
+    {
+      "slots": [
+        {
+          "name": "DayOfWeek",
+          "type": "LIST_OF_DAYS"
+        },
+        {
+          "name": "Friend",
+          "type": "LIST_OF_FRIENDS"
+        }
+      ],
+      "intent": "WhatDoTheyLikeTodo"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+LIST_OF_DESTINATIONS: Nick | roommates 
+LIST_TEXT: call me when you get home
