@@ -1,6 +1,6 @@
 
 
-node('dev-us-east-1'){
+node('dev'){
   sampleConfigurationGetter()
   echo "${env.Manny}"
 }
