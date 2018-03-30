@@ -2,5 +2,5 @@
 
 node(){
   sampleConfigurationGetter()
-  echo "${env.Manny}"
+  echo "${env.TEST_PROPERTY}"
 }
