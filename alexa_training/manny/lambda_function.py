@@ -14,7 +14,32 @@ def lambda_handler(event, context):
     if event_type == 'LaunchRequest':
         return onLaunch()
     elif event_type == 'IntentRequest':
-        return onIntent(event['request'], event['session'])
+
+        if event['request']['intent']['name'] == 'BeCreepy':
+            return_data ={
+                "outputSpeech": {
+                    "type": "SSML",
+                    "ssml": """<speak>
+                    <prosody pitch="low" rate="slow">Have you ever heard of a bad<break time="1s"/></prosody><prosody pitch="low" rate="slow"><emphasis level="strong"> titty?</emphasis></prosody>
+</speak>"""
+                }
+            }
+            return buildResponse(sessionAttributes={}, resp=return_data)
+        elif event['request']['intent']['name'] == 'WhatDoesTrumpThink':
+            import json
+            from six.moves import urllib
+
+            result = urllib.request.urlopen("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+            message = json.loads(result.read())['message']
+            return_data = {
+                "outputSpeech": {
+                    "type": "PlainText",
+                    "text": message
+                }
+            }
+            return buildResponse(sessionAttributes={}, resp=return_data)
+        else:
+            return onIntent(event['request'], event['session'])
 
 def generateIntentResponse(intent_name, slots):
     return_data = {"text": "Something went wrong with your request. Try again, now.", "shouldEndSession": False}

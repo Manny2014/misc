@@ -1,5 +1,5 @@
 {
-  "welcomeMessage": "Welcome to manny's brain, where anything is possible. Let's get it rolling",
+  "welcomeMessage": "Welcome to the best app. What would you like to know about?",
   "intents":{
     "HowMuchHeLoveHer":{
       "text":"Manny loves jime more than a fat kid loves cake.",
@@ -20,15 +20,26 @@
     },
     "TellMeAStory":{
       "options":[
-        "There's a story about {Friend} that took place in Mexico. From what I hear, he had so much fun that he came back to America with a messed up leg and was even carried to his room in a wheel chair. Classic {Friend}."
+        "There's a story about {Friend} that took place in Mexico. From what I hear, he had so much fun that he came back to America with a messed up leg and was even carried to his room in a wheel chair. Classic {Friend}.",
+        "I got the funniest story about {Friend}. One time, we were up in my rooftop kicking it and he tried to jump a gate and landed on his face!",
+        "{Friend} doesn't do what {Friend} does for {Friend}...{Friend} does what {Friend} does because he is...{Friend}",
+        "{Friend} loves to drink with both hands.",
+        "{Friend} doesn't do any cool shit. He's lame.",
+        "{Friend} oh god, where do i start. this one time, during hot yoga, he pooped his pants and blamed the retarded child next to him",
+        "I'm so sorry, {Friend} threatened me that if i ever told on him, he'd fuck me in the ass, but i don't care because his dick already smells like shit. he masturbates to nickleback"
+      ],
+      "shouldEndSession": true
+    },
+     "WhyBeingLame":{
+      "options":[
+        "{Friend} is being a pussy because he forgot to change his tampon.",
+        "This is not surprising. {Friend} prefers to stay at home, along, jerking his little peanut instead of hanging out with his boyz. Fuck {Friend}..."
       ],
       "shouldEndSession": true
     },
     "AMAZON.StopIntent":{
       "options":[
-        "Thank you for hangin with me today. See you on the flip side jabrony.",
-        "You are done with me??? No, I'm done with you. Goodbye!",
-        "Hasta la vista, baby."
+        "Thank you for hangin with me today. See you on the flip side Juhbroni."
       ],
       "shouldEndSession": true
     }

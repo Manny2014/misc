@@ -1,0 +1,15 @@
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: tekton-source-sample
+spec:
+  broker: default
+  subscriber:
+    uri: http://el-pipeline-listener.default.svc.cluster.local:8080
+    # ref:
+    #   apiVersion: tekton.dev/v1alpha1
+    #   kind: EventListener
+    #   name: pipeline-listener   
+      # apiVersion: v1
+      # kind: Service
+      # name: knative-consumer

@@ -1,0 +1,37 @@
+apiVersion: getambassador.io/v1
+kind:  Mapping
+metadata:
+  name:  httpbin
+spec:
+  prefix: /
+  service: message-dumper.192.168.1.132.xip.io:30080
+  host_rewrite: message-dumper.default.192.168.1.132.xip.io
+# ---
+# apiVersion: getambassador.io/v1
+# kind:  Mapping
+# metadata:
+#   name:  httpbin-two
+# spec:
+#   prefix: /manny
+#   service: message-dumper.default.192.168.1.132.xip.io:30080
+#   host_rewrite: message-dumper.default.192.168.1.132.xip.io
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: message-dumper
+  labels:
+    serving.knative.dev/visibility: cluster-local
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "1"
+        autoscaling.knative.dev/maxScale: "10"
+    spec:
+      containers:
+      - image: onaci/docker-http-https-echo
+        ports:
+          - name: http1
+            containerPort: 80
+            protocol: TCP
