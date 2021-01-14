@@ -1,4 +1,4 @@
-# DEMO
+
 stages:
   - name: Build something
     # Conditions for stages
