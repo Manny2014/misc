@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: product-a-sys-comps
+  description: Root location for product-a-sys-1-comps
+spec:
+  targets:
+  - ./comp-1.yaml

@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: custom-support-ui
+  description: UI for customer support
+spec:
+  type: website
+  lifecycle: dev
+  owner: product-a
+  system: customer-support-portal
+  dependsOn: []
+  providesApis: []
