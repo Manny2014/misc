@@ -6,4 +6,4 @@ metadata:
 spec:
   targets:
   - ./group.yaml
-  # - ./systems/location.yaml
+  - ./systems/location.yaml
