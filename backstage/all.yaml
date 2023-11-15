@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: all-products
+  description: Root location for all entities
+spec:
+  targets:
+    - ./product-a/location.yaml
+    - ./product-b/location.yaml
