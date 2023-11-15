@@ -5,5 +5,5 @@ metadata:
   description: Root location for product-a-sys-1 
 spec:
   targets:
-  - ./sys.yaml
+  - ./system.yaml
   - ./components/location.yaml
