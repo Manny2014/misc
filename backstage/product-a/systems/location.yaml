@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: product-a-sys
+  description: Root location for product-a systems
+spec:
+  targets:
+  - ./sys-1.yaml

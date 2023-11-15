@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: customer-support-portal
+  description: Customer support stuff
+spec:
+  owner: product-a
