@@ -4,5 +4,6 @@ metadata:
   name: product-a
   description: Root location for product-a entities
 spec:
+  type: file
   targets:
   - ./group.yaml

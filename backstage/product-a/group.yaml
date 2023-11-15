@@ -8,3 +8,4 @@ spec:
   profile:
     displayName: product-a
     email: product-a@example.com
+  children: []
