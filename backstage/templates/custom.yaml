@@ -7,9 +7,9 @@ metadata:
   title: Test custom template
   description: test custom actions
 spec:
-  owner: backstage/techdocs-core
-  type: service
-  parameters:
+    owner: backstage/techdocs-core
+    type: service
+    parameters:
     - title: Provie Argo Wft data
       required:
         - namespace
@@ -36,9 +36,9 @@ spec:
                 - 'workflow-template-submittable (gp2)'
                 - 'workflow-template-inner-dag (dag-sample)'
     steps:
-        - id: submit-wft
-          name: Submit WFT
-          action: argo:wft:submit
-          input:
-            namespace: ${{ parameters.namespace }}
-            workflowTemplateName: ${{ parameters.workflowTemplateName }}
+    - id: submit-wft
+      name: Submit WFT
+      action: argo:wft:submit
+      input:
+        namespace: ${{ parameters.namespace }}
+        workflowTemplateName: ${{ parameters.workflowTemplateName }}
