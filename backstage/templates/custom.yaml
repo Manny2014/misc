@@ -33,12 +33,12 @@ spec:
                 - workflow-template-submittable
                 - workflow-template-inner-dag
             enumNames:
-                - 'workflow-template-submittable (gp2)'
+                - 'hello world'
                 - 'workflow-template-inner-dag (dag-sample)'
         workflowInputs:
             title: Workflow Inputs
             type: string
-            description: Insert key=value argo inputs
+            description: Insert key=value argo inputs separated by commas
             ui:widget: textarea
             ui:options:
                 rows: 10
