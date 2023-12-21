@@ -14,6 +14,7 @@ spec:
       required:
         - namespace
         - workflowTemplateName
+        - workflowInputs
       properties:
         namespace:
             title: K8s Namespace
@@ -39,6 +40,7 @@ spec:
             title: Workflow Inputs
             type: string
             description: Insert key=value argo inputs separated by commas
+            default: ""
             ui:widget: textarea
             ui:options:
                 rows: 8
