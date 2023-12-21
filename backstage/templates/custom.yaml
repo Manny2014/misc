@@ -28,6 +28,7 @@ spec:
             type: string
             description: Argo workflow template name
             ui:autofocus: true
+            default: workflow-template-submittable
             enum:
             - workflow-template-submittable
             - workflow-template-inner-dag
