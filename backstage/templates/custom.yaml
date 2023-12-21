@@ -14,6 +14,7 @@ spec:
       required:
         - namespace
         - workflowTemplateName
+        - workflowInputs
       properties:
         namespace:
             title: K8s Namespace
@@ -42,6 +43,7 @@ spec:
             ui:widget: textarea
             ui:options:
                 rows: 8
+            ui:placeholder: ""
     steps:
     - id: submit-wft
       name: Submit WFT
