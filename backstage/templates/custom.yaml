@@ -34,7 +34,7 @@ spec:
                 - workflow-template-inner-dag
             enumNames:
                 - 'hello world'
-                - 'workflow-template-inner-dag (dag-sample)'
+                - 'dag-sample'
         workflowInputs:
             title: Workflow Inputs
             type: string
