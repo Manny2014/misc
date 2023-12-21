@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
-  name: sample-1
+  name: betav3-sample-1
   title: Test custom template
   description: test custom actions
 spec:
