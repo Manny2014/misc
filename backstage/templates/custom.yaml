@@ -30,11 +30,11 @@ spec:
             ui:autofocus: true
             default: workflow-template-submittable
             enum:
-            - workflow-template-submittable
-            - workflow-template-inner-dag
+                - workflow-template-submittable
+                - workflow-template-inner-dag
             enumNames:
-            - 'workflow-template-submittable (gp2)'
-            - 'workflow-template-inner-dag (dag-sample)'
+                - 'workflow-template-submittable (gp2)'
+                - 'workflow-template-inner-dag (dag-sample)'
     steps:
         - id: submit-wft
           name: Submit WFT
