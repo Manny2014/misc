@@ -1,0 +1,43 @@
+# Notice the v1beta3 version
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: sample-1
+  title: Test custom template
+  description: test custom actions
+spec:
+  owner: backstage/techdocs-core
+  type: service
+  parameters:
+    - title: Provie Argo Wft data
+      required:
+        - namespace
+        - workflowTemplateName
+      properties:
+        namespace:
+            title: K8s Namespace
+            type: string
+            default: argo
+            maxLength: 8
+            description: Namespace to subit wf
+            ui:autofocus: true
+            ui:help: 'Hint: Your app namespace...'
+        workflowTemplateName:
+            title: Template name
+            type: string
+            description: Argo workflow template name
+            ui:autofocus: true
+            enum:
+            - workflow-template-submittable
+            - workflow-template-inner-dag
+            enumNames:
+            - 'workflow-template-submittable (gp2)'
+            - 'workflow-template-inner-dag (dag-sample)'
+    steps:
+        - id: submit-wft
+          name: Submit WFT
+          action: argo:wft:submit
+          input:
+            namespace: ${{ parameters.namespace }}
+            workflowTemplateName: ${{ parameters.workflowTemplateName }}
