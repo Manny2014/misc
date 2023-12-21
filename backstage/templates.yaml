@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: all-templates
+  description: All managed templates
+spec:
+  targets:
+    - ./templates/custom.yaml

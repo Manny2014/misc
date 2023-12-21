@@ -7,4 +7,3 @@ spec:
   targets:
     - ./product-a/location.yaml
     - ./product-b/location.yaml
-    - ./templates/custom.yaml
