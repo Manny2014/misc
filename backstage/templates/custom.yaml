@@ -35,6 +35,13 @@ spec:
             enumNames:
                 - 'workflow-template-submittable (gp2)'
                 - 'workflow-template-inner-dag (dag-sample)'
+        workflowInputs:
+            title: Workflow Inputs
+            type: string
+            description: Insert key=value argo inputs
+            ui:widget: textarea
+            ui:options:
+                rows: 10
     steps:
     - id: submit-wft
       name: Submit WFT
