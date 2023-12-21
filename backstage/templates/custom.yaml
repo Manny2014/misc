@@ -43,7 +43,7 @@ spec:
             ui:widget: textarea
             ui:options:
                 rows: 8
-            ui:placeholder: ""
+            ui:placeholder: "sample=input"
     steps:
     - id: submit-wft
       name: Submit WFT
