@@ -41,7 +41,6 @@ spec:
             type: string
             description: Insert key=value argo inputs separated by commas
             ui:widget: textarea
-            default: "sample=input"
             ui:options:
                 rows: 8
             ui:placeholder: "sample=input"
@@ -52,3 +51,4 @@ spec:
       input:
         namespace: ${{ parameters.namespace }}
         workflowTemplateName: ${{ parameters.workflowTemplateName }}
+        workflowInputs: ${{ parameters.workflowInputs}}
