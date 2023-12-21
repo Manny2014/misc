@@ -41,7 +41,7 @@ spec:
             description: Insert key=value argo inputs separated by commas
             ui:widget: textarea
             ui:options:
-                rows: 10
+                rows: 8
     steps:
     - id: submit-wft
       name: Submit WFT
