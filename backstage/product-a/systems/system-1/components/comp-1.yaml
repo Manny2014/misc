@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: custom-support-ui
   description: UI for customer support
+  annotations:
+    argo-wf/component_id: cp-0001
 spec:
   type: website
   lifecycle: dev
