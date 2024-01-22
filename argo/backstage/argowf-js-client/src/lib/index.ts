@@ -1,0 +1,1 @@
+export { ArgoWorkflowServiceClient } from "./client.js";

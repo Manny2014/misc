@@ -1,0 +1,1 @@
+export {WorkflowBuildsTable} from './WorkflowBuildsTable';
