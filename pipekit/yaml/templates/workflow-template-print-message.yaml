@@ -4,7 +4,7 @@ metadata:
   name: workflow-template-print-message
 spec:
   entrypoint: print-message
-
+  serviceAccountName: argo-workflow
   arguments:
     parameters:
     - name: message
